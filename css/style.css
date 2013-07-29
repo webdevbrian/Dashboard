@@ -24,18 +24,3 @@ body,html { font-family: 'Roboto', sans-serif; font-size: 12px; line-height: 14p
   .tempHigh { font-size: 6em; line-height: 1em; }
   .tempLow { font-size: 6em; line-height: 1em; }
   .temp { display: block; font-size: 16em; line-height: 1em; }
-
-
-/* #Font sizes
-================================================== */
-/* Large desktop */
-@media (min-width: 980px) { body { font-size:110%; line-height: 100%;} }
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { body { font-size:90%; line-height: 80%;} .navbar-fixed-top {margin-bottom: 0px;} }
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { body { font-size:60%; } }
-
-/* Landscape phones and down */
-@media (max-width: 480px) { body { font-size:40%; line-height: 30%; } }
