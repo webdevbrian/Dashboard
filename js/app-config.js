@@ -8,6 +8,9 @@ var config = {
   degree: 'f',
 
   // Set your current location name, can be anything but keep it short
-  location: 'Southbury'
+  location: 'Southbury',
+
+  // Set the font color (depending on your background image, white or black for instance may look better / more legible). This can be in english or hex.
+  txtColor: 'white'
 
 };

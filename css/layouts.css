@@ -7,7 +7,10 @@
 @media (min-width: 768px) and (max-width: 979px) { body { font-size:90%; line-height: 80%;} .navbar-fixed-top {margin-bottom: 0px;} }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { body { font-size:60%; } }
+@media (max-width: 767px) , screen and (max-height: 700px) { body { font-size:60%; } }
 
 /* Landscape phones and down */
-@media (max-width: 480px) { body { font-size:40%; line-height: 30%; } }
+@media (max-width: 480px) , screen and (max-height: 400px)  { body { font-size:40%; line-height: 30%; } }
+
+/* Really ... really small */
+@media (max-width: 400px) , screen and (max-height: 250px)  { body { font-size:20%; line-height: 20%; } }

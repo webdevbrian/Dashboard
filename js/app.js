@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  // Text Color
+  $('body').css('color',config.txtColor);
+
+  // Init Background images
+  $.backstretch(["images/bg.jpg"], {duration: 4000, fade: 500});
+
   // Init Clock
   startTime();
   setInterval("startTime()", 1000);
