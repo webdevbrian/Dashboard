@@ -1,16 +1,65 @@
 /* #Font sizes
 ================================================== */
 /* Large desktop */
-@media (min-width: 980px) { body { font-size:110%; line-height: 100%;} }
+@media (min-width: 980px) {
+  body { 
+    font-size:100%;
+    line-height: 100%;
+  }
+}
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { body { font-size:90%; line-height: 80%;} .navbar-fixed-top {margin-bottom: 0px;} }
+@media (min-width: 900px) and (max-height: 1009px) { 
+  body { 
+    font-size:90%;
+    line-height: 80%;
+  }
+}
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) , screen and (max-height: 700px) { body { font-size:60%; } }
+@media (max-width: 790px) , screen and (max-height: 770px) {
+  body {
+    font-size:60%;
+    line-height: 50%;
+  }
+}
 
-/* Landscape phones and down */
-@media (max-width: 480px) , screen and (max-height: 400px)  { body { font-size:40%; line-height: 30%; } }
+/* Landscape phones and down 1 */
+@media (max-width: 590px) , screen and (max-height: 600px)  { 
+  body {
+    font-size:50%;
+    line-height: 40%;
+  }
+}
+
+/* Landscape phones and down 2 */
+@media (max-width: 520px) , screen and (max-height: 440px)  { 
+  body {
+    font-size:45%;
+    line-height: 35%;
+  }
+}
+
+/* Landscape phones and down 3 */
+@media (max-width: 480px) , screen and (max-height: 400px)  { 
+  body {
+    font-size:40%;
+    line-height: 30%;
+  }
+}
+
+/* Landscape phones and down 4 */
+@media (max-width: 450px) , screen and (max-height: 300px)  { 
+  body {
+    font-size:20%;
+    line-height: 20%;
+  }
+}
 
 /* Really ... really small */
-@media (max-width: 400px) , screen and (max-height: 250px)  { body { font-size:20%; line-height: 20%; } }
+@media (max-width: 400px) , screen and (max-height: 250px)  {
+  body {
+    font-size:20%;
+    line-height: 20%;
+  }
+}
