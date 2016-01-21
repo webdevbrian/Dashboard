@@ -16,8 +16,6 @@ $(document).ready(function() {
     unit: config.degree,
     success: function(weather) {
 
-      console.log(weather);
-
       $('.city').html(weather.city);
       $('.weather').html(weather.currently);
       $('.tempHigh').html('H: ' + weather.high + ' |');
