@@ -7,10 +7,10 @@ $(document).ready(function() {
 
   // Init Background images
   $.backstretch([
-      "http://i.imgur.com/OYB4XB3.jpg"
-    , "http://i.imgur.com/hvtYISi.jpg"
-    , "http://i.imgur.com/uu76hoI.jpg"
-    , "http://i.imgur.com/XHXV0z6.jpg"
+     "http://i.imgur.com/hvtYISi.jpg"
+    //, "http://i.imgur.com/OYB4XB3.jpg"
+    //, "http://i.imgur.com/uu76hoI.jpg"
+    //, "http://i.imgur.com/XHXV0z6.jpg"
   ], {duration: 30000, fade: 8000});
 
   // Init Clock & weather refresh
