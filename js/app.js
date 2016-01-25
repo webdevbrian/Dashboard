@@ -7,11 +7,10 @@ $(document).ready(function() {
 
   // Init Background images
   $.backstretch([
-      "http://i.imgur.com/BQg7oT7.jpg"
-    , "http://i.imgur.com/cWIoSW1.jpg"
-    , "http://i.imgur.com/NGuvMll.jpg"
-    , "http://i.imgur.com/p7u0Iq4.jpg"
-    , "http://i.imgur.com/krE7zdJ.jpg"
+      "http://i.imgur.com/OYB4XB3.jpg"
+    , "http://i.imgur.com/hvtYISi.jpg"
+    , "http://i.imgur.com/uu76hoI.jpg"
+    , "http://i.imgur.com/XHXV0z6.jpg"
   ], {duration: 30000, fade: 8000});
 
   // Init Clock & weather refresh
@@ -56,7 +55,7 @@ function getWeather(){
   $.simpleWeather({
     zipcode: config.zipcode,
     success: function(weather) {
-      console.log(weather);
+
       $('.city').html(weather.city+','+weather.region);
       $('.weather').html(weather.currently);
       $('.tempHigh').html('H: ' + weather.high + ' |');
