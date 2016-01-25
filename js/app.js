@@ -5,48 +5,53 @@ $(document).ready(function() {
   // Text Color
   $('body').css('color',config.txtColor);
 
-  // Get user's zipcode from webapi
-  function showLocation(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-    alert("Latitude : " + latitude + " Longitude: " + longitude);
-  }
-
-  function errorHandler(err) {
-    if(err.code == 1) {
-       alert("Error: Access is denied!");
-    }
-    else if( err.code == 2) {
-       alert("Error: Position is unavailable!");
-    }
-  }
-
-  function getLocation(){
-    if(navigator.geolocation){
-       // timeout at 60000 milliseconds (60 seconds)
-       var options = {timeout:60000};
-       navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
-    }
-    else{
-       alert("Sorry, browser does not support geolocation!");
-    }
-  }
-
-  getLocation();
-
   // Init Background images
-  $.backstretch(["images/bg.jpg"], {duration: 4000, fade: 500});
+  $.backstretch(["images/bg.jpg"], { duration: 4000, fade: 500 });
 
-  // Init Clock
+  // Init Clock & weather refresh
   startTime();
   setInterval("startTime()", 1000);
+  getWeather();
+  setInterval("getWeather()", 900000);
 
-  // Init Weather
+}); // End DocReady
+
+// Clock
+function startTime() {
+  var currentTime = new Date ( );
+
+  var currentHours = currentTime.getHours ( );
+  var currentMinutes = currentTime.getMinutes ( );
+  var currentSeconds = currentTime.getSeconds ( );
+
+  // Pad the minutes and seconds with leading zeros, if required
+  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+  // Choose either "AM" or "PM" as appropriate
+  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+  // Convert the hours component to 12-hour format if needed
+  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+  // Convert an hours component of "0" to "12"
+  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+  // Compose the string for display
+  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+
+  // Update the time display
+  $('.time').html(currentTimeString);
+}
+
+// Init Weather
+function getWeather(){
+
   $.simpleWeather({
     zipcode: config.zipcode,
     success: function(weather) {
-
-      $('.city').html(weather.city);
+      console.log(weather);
+      $('.city').html(weather.city+','+weather.region);
       $('.weather').html(weather.currently);
       $('.tempHigh').html('H: ' + weather.high + ' |');
       $('.tempLow').html(' L: ' + weather.low);
@@ -160,33 +165,4 @@ $(document).ready(function() {
       $(".city").html('Weather error, check your settings!');
     }
   });
-
-}); // End DocReady
-
-// Clock
-function startTime() {
-  var currentTime = new Date ( );
-
-  var currentHours = currentTime.getHours ( );
-  var currentMinutes = currentTime.getMinutes ( );
-  var currentSeconds = currentTime.getSeconds ( );
-
-  // Pad the minutes and seconds with leading zeros, if required
-  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
-  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
-
-  // Choose either "AM" or "PM" as appropriate
-  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
-
-  // Convert the hours component to 12-hour format if needed
-  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
-
-  // Convert an hours component of "0" to "12"
-  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
-
-  // Compose the string for display
-  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
-
-  // Update the time display
-  $('.time').html(currentTimeString);
 }
