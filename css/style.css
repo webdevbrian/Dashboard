@@ -7,7 +7,7 @@
 
 /* #Global Declarations
 ================================================== */
-body,html { font-family: 'Roboto', sans-serif;  font-weight: 100; background: #FFF; }
+body,html { font-family: 'Roboto', Helvetica, Arial, sans-serif;  font-weight: 100; background: #FFF; }
 
 /* #Structure
 ================================================== */
@@ -16,7 +16,6 @@ body,html { font-family: 'Roboto', sans-serif;  font-weight: 100; background: #F
 .top { width: 100%; text-align: center; position: absolute; top:0; }
   .city { display: block; font-size: 9em; line-height: 2em; font-weight: 800; text-transform: uppercase; }
   .time { display: block; font-size: 12em; line-height: .5em; font-weight: 400; }
-
 
 .bottom { text-align: left; position: absolute; bottom: 0; padding: 20px;}
   .weathericon { display: inline-block; font-family: weatherSansSerif; font-size: 10em; line-height: 1em;}
