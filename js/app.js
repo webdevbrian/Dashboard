@@ -6,7 +6,13 @@ $(document).ready(function() {
   $('body').css('color',config.txtColor);
 
   // Init Background images
-  $.backstretch(["images/bg.jpg"], { duration: 4000, fade: 500 });
+  $.backstretch([
+      "http://i.imgur.com/BQg7oT7.jpg"
+    , "http://i.imgur.com/cWIoSW1.jpg"
+    , "http://i.imgur.com/NGuvMll.jpg"
+    , "http://i.imgur.com/p7u0Iq4.jpg"
+    , "http://i.imgur.com/krE7zdJ.jpg"
+  ], {duration: 30000, fade: 8000});
 
   // Init Clock & weather refresh
   startTime();
@@ -38,7 +44,7 @@ function startTime() {
   currentHours = ( currentHours == 0 ) ? 12 : currentHours;
 
   // Compose the string for display
-  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+  var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
 
   // Update the time display
   $('.time').html(currentTimeString);
@@ -54,8 +60,12 @@ function getWeather(){
       $('.city').html(weather.city+','+weather.region);
       $('.weather').html(weather.currently);
       $('.tempHigh').html('H: ' + weather.high + ' |');
-      $('.tempLow').html(' L: ' + weather.low);
+      $('.tempLow').html('L: ' + weather.low);
       $('.temp').html(weather.temp + '&deg;' + weather.units.temp);
+
+      $('.humidity').html('Humidity: '+ weather.humidity +'%');
+      $('.sunrise').html('Sunrise: '+ weather.sunrise);
+      $('.sunset').html('Sunset: ' + weather.sunset);
 
       // Displays the right weather icon.  We're basing this off of a font, so we need to match the error codes with the font characters (this was a pain in the ass, just saying)
       if(weather.code == '0') {
