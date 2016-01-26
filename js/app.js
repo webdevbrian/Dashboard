@@ -75,11 +75,11 @@ function getWeather(){
 
       $('.current .weather').html(weather.currently);
       $('.future .weather').html(weather.forecast);
-      $('.tempHigh').html('H: ' + weather.high + ' |');
-      $('.tempLow').html('L: ' + weather.low);
+      $('.tempHigh').html('H: ' + weather.high + '&deg; |');
+      $('.tempLow').html('L: ' + weather.low+'&deg;');
       $('.temp').html(weather.temp + '&deg;' + weather.units.temp);
 
-      $('.humidity').html('Humidity: '+ weather.humidity +'%');
+      $('.humidityWind').html('Humidity: '+ weather.humidity +'% |'+' Wind: '+weather.wind.direction+' at '+weather.wind.speed+'MPH');
 
       // Displays the right weather icon.  We're basing this off of a font, so we need to match the error codes with the font characters (this was a pain in the ass, just saying)
       if(weather.code == '0') {
