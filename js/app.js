@@ -63,6 +63,9 @@ function startTime() {
 // Init Weather
 function getWeather(){
 
+  // Refresh the google map for up to date traffic data
+  initializeMap();
+
   $.simpleWeather({
     zipcode: config.zipcode,
     success: function(weather) {
