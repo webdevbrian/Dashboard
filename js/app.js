@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  console.log('v1.3');
+  console.log('v1.4');
 
   // Text Color
   $('body').css('color',config.txtColor);
@@ -49,39 +49,14 @@ function startTime() {
   // Update the time display
   $('.time').html(currentTimeString);
 
-  // Date functions
-  var weekDate = new Date();
-  var weekday = new Array(7);
-  
-  weekday[0]=  "Sunday";
-  weekday[1] = "Monday";
-  weekday[2] = "Tuesday";
-  weekday[3] = "Wednesday";
-  weekday[4] = "Thursday";
-  weekday[5] = "Friday";
-  weekday[6] = "Saturday";
-
-  var dayOfWeek = weekday[weekDate.getDay()];
+  var dayOfWeek = moment().format('dddd');
+  var mmddyy = moment().format("MMM Do YYYY");
 
   // Update date
-
   $('.date').html(dayOfWeek);
 
-  // Greeting depending on time of day
-  var greeting;
-  if (weekDate.getHours() < 12)  {    
-    greeting = "Good Morning!";
-  } else if (weekDate.getHours() >= 12 && weekDate.getHours() <= 17) {   
-    greeting = "Good Afternoon!"; 
-  } else if (weekDate.getHours() > 17 && weekDate.getHours() <= 24) {    
-    greeting = "Good Evening!"; 
-  } else {    
-    greeting = 'The time is unknown!';
-  } 
-
-  greeting = greeting+' It is ';
-  
-  $('.greeting').html(greeting);
+  // Update top date
+  $('.mmddyyyy').html(mmddyy);
 
 
 }
@@ -93,14 +68,18 @@ function getWeather(){
     zipcode: config.zipcode,
     success: function(weather) {
 
-      $('.weather').html(weather.currently);
+      console.log(weather);
+
+      $('.sunriseTime').html(weather.sunrise);
+      $('.sunsetTime').html(weather.sunset);
+
+      $('.current .weather').html(weather.currently);
+      $('.future .weather').html(weather.forecast);
       $('.tempHigh').html('H: ' + weather.high + ' |');
       $('.tempLow').html('L: ' + weather.low);
       $('.temp').html(weather.temp + '&deg;' + weather.units.temp);
 
       $('.humidity').html('Humidity: '+ weather.humidity +'%');
-      $('.sunrise').html('Sunrise: '+ weather.sunrise);
-      $('.sunset').html('Sunset: ' + weather.sunset);
 
       // Displays the right weather icon.  We're basing this off of a font, so we need to match the error codes with the font characters (this was a pain in the ass, just saying)
       if(weather.code == '0') {

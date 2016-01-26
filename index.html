@@ -22,6 +22,7 @@
 
   <script type="text/javascript" src="js/jquery1.9.js"></script>
   <script type="text/javascript" src="js/jquery.simpleWeather-2.3.min.js"></script>
+  <script type="text/javascript" src="js/moment-min.js"></script>
   <script type="text/javascript" src="js/backstretch.js"></script>
   <script type="text/javascript" src="js/app-config.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
@@ -31,13 +32,30 @@
   <div id="content">
     <div class="top">
       <div class="date">LOADING...</div>
-      <div class="greeting"></div>
+      <div class="mmddyyyy"></div>
+      <div class="sunriseSunset">
+        <div class="riseIcon">1</div>
+        <div class="sunriseTime"></div>
+        <div class="setIcon">0</div>
+        <div class="sunsetTime"></div>
+      </div>
       <div class="time"></div>
     </div>
     <div class="bottomLeft">
-      <div class="weathericon"></div>
-      <div class="weather"></div><br/>
-      <div class="tempHigh"></div><div class="tempLow"></div>
+      <div class="title">Today:</div>
+      <div class="current">
+        <div class="currently">Currently:</div>
+        <div class="weathericon"></div>
+        <div class="weather"></div>
+      </div>
+      <div class="future">
+        <div class="forecast">Forecast:</div>
+        <div class="weather"></div>
+      </div>
+      <div class="highLow">
+        <div class="tempHigh"></div>
+        <div class="tempLow"></div>
+      </div>
       <div class="humidity"></div>
       <div class="temp"></div>
     </div>
