@@ -68,7 +68,6 @@ function getWeather(){
     success: function(weather) {
 
       $('#content').show();
-      //console.log(weather);
 
       $('.sunriseTime').html(weather.sunrise);
       $('.sunsetTime').html(weather.sunset);
@@ -189,4 +188,16 @@ function getWeather(){
       $(".date").html('Weather error, check your settings!');
     }
   });
+}
+
+// Init Traffic Map
+function initializeMap(){
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: new google.maps.LatLng(41.4577291, -73.334476),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var trafficLayer = new google.maps.TrafficLayer();
+  trafficLayer.setMap(map);
 }
