@@ -23,7 +23,8 @@ $(document).ready(function() {
 
 // Clock
 function startTime() {
-  var currentTime = new Date ( );
+
+  var currentTime = new Date ();
 
   var currentHours = currentTime.getHours ( );
   var currentMinutes = currentTime.getMinutes ( );
@@ -47,6 +48,42 @@ function startTime() {
 
   // Update the time display
   $('.time').html(currentTimeString);
+
+  // Date functions
+  var weekDate = new Date();
+  var weekday = new Array(7);
+  
+  weekday[0]=  "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+
+  var dayOfWeek = weekday[weekDate.getDay()];
+
+  // Update date
+
+  $('.date').html(dayOfWeek);
+
+  // Greeting depending on time of day
+  var greeting;
+  if (weekDate.getHours() < 12)  {    
+    greeting = "Good Morning!";
+  } else if (weekDate.getHours() >= 12 && weekDate.getHours() <= 17) {   
+    greeting = "Good Afternoon!"; 
+  } else if (weekDate.getHours() > 17 && weekDate.getHours() <= 24) {    
+    greeting = "Good Evening!"; 
+  } else {    
+    greeting = 'The time is unknown!';
+  } 
+
+  greeting = greeting+' It is ';
+  
+  $('.greeting').html(greeting);
+
+
 }
 
 // Init Weather
@@ -56,7 +93,6 @@ function getWeather(){
     zipcode: config.zipcode,
     success: function(weather) {
 
-      $('.city').html(weather.city+','+weather.region);
       $('.weather').html(weather.currently);
       $('.tempHigh').html('H: ' + weather.high + ' |');
       $('.tempLow').html('L: ' + weather.low);
@@ -171,7 +207,7 @@ function getWeather(){
 
     },
     error: function(error) {
-      $(".city").html('Weather error, check your settings!');
+      $(".date").html('Weather error, check your settings!');
     }
   });
 }
