@@ -11,13 +11,13 @@ body,html { font-family: 'Roboto', Helvetica, Arial, sans-serif;  font-weight: 1
 
 /* #Structure
 ================================================== */
-#content { width: 100%; overflow: hidden; }
+#content { width: 100%; overflow: hidden; display: none; }
 
 .backstretch { opacity: .5; }
 
 .top { width: 100%; text-align: center; position: absolute; top:0; }
   .date { font-size: 9em; line-height: 1.3em; font-weight: 300; text-transform: uppercase; }
-  .mmddyyyy { font-size: 3em; line-height: 1.4em; margin-top: -10px; font-weight: bold; }
+  .mmddyyyy { font-size: 5em; line-height: 1.0em; margin-top: -10px; font-weight: bold; }
   .sunriseSunset { font-size: 4em; line-height: 1.4em; margin-top: -10px; }
     .riseIcon, .setIcon{ font-family: weatherSansSerif; font-size: 1em; line-height: 1em; display: inline-block;}
     .sunriseTime, .sunsetTime { font-size: .75em; line-height: 1em; display: inline-block;}

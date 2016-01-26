@@ -58,7 +58,6 @@ function startTime() {
   // Update top date
   $('.mmddyyyy').html(mmddyy);
 
-
 }
 
 // Init Weather
@@ -68,7 +67,8 @@ function getWeather(){
     zipcode: config.zipcode,
     success: function(weather) {
 
-      console.log(weather);
+      $('#content').show();
+      //console.log(weather);
 
       $('.sunriseTime').html(weather.sunrise);
       $('.sunsetTime').html(weather.sunset);
