@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  console.log('v1.4');
+  console.log('v1.5');
 
   // Text Color
   $('body').css('color',config.txtColor);
@@ -8,12 +8,10 @@ $(document).ready(function() {
   // Init Background images
   $.backstretch([
      "http://i.imgur.com/hvtYISi.jpg"
-    //, "http://i.imgur.com/OYB4XB3.jpg"
-    //, "http://i.imgur.com/uu76hoI.jpg"
-    //, "http://i.imgur.com/XHXV0z6.jpg"
+     //, "feel free to add more here"
   ], {duration: 30000, fade: 8000});
 
-  // Init Clock & weather refresh
+  // Init Clock & weather/map refresh
   startTime();
   setInterval("startTime()", 1000);
   getWeather();
@@ -203,4 +201,7 @@ function initializeMap(){
 
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
+
+  google.maps.event.trigger(trafficLayer, 'resize');
+
 }

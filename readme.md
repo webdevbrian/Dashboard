@@ -1,6 +1,11 @@
-#Big Ass Clock
-Because some times, you just need a huge friggin' clock!
+#Weather Tablet
 
-Obviously this is pretty barebones, so you can modify it to suit your needs. Simply fullscreen a web browser and point it to the index file. Please make sure to modify /js/app-config.js!
 
-![That's a big ass clock!](http://i.imgur.com/kF819Z6.png)
+
+ Made a lot of changes since this use to be called "Big Ass Clock" Ha!
+ 
+ Pulls weather and displays a google map with live traffic info on it. Feel free to customize and fork!
+ 
+ I currently have this hosted free on getforge.com - pretty nice place for static sites and apps :)
+
+![Woo hoo!](http://i.imgur.com/jnGOGf3.png)

@@ -27,7 +27,7 @@ body,html { font-family: 'Roboto', Helvetica, Arial, sans-serif;  font-weight: 1
   .title { font-size: 3em; line-height: 2em; font-weight: 600; text-transform: uppercase; border-bottom: 1px dotted rgba(255,255,255, .5); }
   .weathericon { display: inline-block; font-family: weatherSansSerif; font-size: 8em; line-height: 0.6em; display: inline-block;}
   .currently { display: inline-block; vertical-align: middle; margin: -38px 15px 0 0;}
-  .weather { display: inline-block; font-size: 3.5em; line-height: 1.4em; display: inline-block; }
+  .weather { display: inline-block; font-size: 3em; line-height: 1.4em; display: inline-block; }
   .forecast { display: inline-block; margin: 0 15px 0 0; }
     .future { border-bottom: 1px dotted rgba(255,255,255, .5); padding-bottom: 15px; margin: 0 0 15px 0; }
     .future .weather { font-size: 2em; line-height: 2em; vertical-align: middle; }
@@ -36,5 +36,5 @@ body,html { font-family: 'Roboto', Helvetica, Arial, sans-serif;  font-weight: 1
   .humidityWind { font-size: 1.6em; line-height: 1.1em; display: block; }
   .temp { display: block; font-size: 10em; line-height: 1em; font-weight: 600; }
 
-.bottomRight { text-align: right; position: absolute; bottom: 0; right: 0; padding: 0px; font-size: 3em; line-height: 1.3em;  }
+.bottomRight { text-align: left; position: absolute; bottom: 0; right: 0; padding: 0px; font-size: 3em; line-height: 1.3em;  }
   #map { border-radius: 20px; }

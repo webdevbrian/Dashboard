@@ -35,31 +35,32 @@
 /* Landscape phones and down 2 */
 @media (max-width: 520px) , screen and (max-height: 440px)  { 
   body {
-    font-size:45%;
-    line-height: 35%;
+    font-size:50%;
+    line-height: 50%;
   }
+  .bottomRight { display: none; }
 }
 
 /* Landscape phones and down 3 */
 @media (max-width: 480px) , screen and (max-height: 400px)  { 
   body {
     font-size:40%;
-    line-height: 30%;
+    line-height: 40%;
   }
 }
 
 /* Landscape phones and down 4 */
 @media (max-width: 450px) , screen and (max-height: 300px)  { 
   body {
-    font-size:20%;
-    line-height: 20%;
+    font-size:30%;
+    line-height: 40%;
   }
 }
 
 /* Really ... really small */
 @media (max-width: 400px) , screen and (max-height: 250px)  {
   body {
-    font-size:20%;
-    line-height: 20%;
+    font-size:30%;
+    line-height: 40%;
   }
 }
