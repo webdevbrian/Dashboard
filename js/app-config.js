@@ -1,11 +1,19 @@
 // Below are the settings for the app, config to your liking.
 var config = {
 
+  //
+  // General Settings
+  //
+
   // Your zip
   zipcode: '06798',
 
   // Color for text (can be hex)
   txtColor: 'white',
+
+  //
+  // Map specific settings
+  //
 
   // Your latitude and longitude coordinates for the traffic map
   // see: http://www.mapcoordinates.net/en
@@ -15,7 +23,11 @@ var config = {
   // Zoom level for the map
   mapZoom: 10,
 
-  // Background image of your choice (can be multiple)
+  //
+  // Background images
+  //
+
+  // Background image(s) of your choice (can be multiple)
   bgImages: ["https://upload.wikimedia.org/wikipedia/commons/8/89/Crown_Princess.jpg"
             ,"http://i.imgur.com/hvtYISi.jpg"],
 
@@ -23,6 +35,6 @@ var config = {
   bgImageDuration: 15000,
 
   // Time for the fade animation to last between images
-  bgImageFade: 1000
+  bgImageFade: 5000
 
 };

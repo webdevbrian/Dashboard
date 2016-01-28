@@ -17,19 +17,19 @@ body,html { font-family: 'Roboto', Helvetica, Arial, sans-serif;  font-weight: 1
 
 .top { width: 100%; text-align: center; position: absolute; top:0; }
   .date { font-size: 9em; line-height: 1.3em; font-weight: 300; text-transform: uppercase; }
-  .mmddyyyy { font-size: 5em; line-height: 1.0em; margin-top: -10px; font-weight: bold; }
-  .sunriseSunset { font-size: 4em; line-height: 1.4em; margin-top: -10px; }
+  .mmddyyyy { font-size: 5em; line-height: 1.0em; font-weight: bold; }
+  .sunriseSunset { font-size: 4em; line-height: 1.4em;}
     .riseIcon, .setIcon{ font-family: weatherSansSerif; font-size: 1em; line-height: 1em; display: inline-block;}
     .sunriseTime, .sunsetTime { font-size: .75em; line-height: 1em; display: inline-block;}
   .time { font-size: 10em; line-height: 1.0em; font-weight: 400; }
 
 .bottomLeft { text-align: left; position: absolute; bottom: 0; left: 0; padding: 20px;}
-  .title { font-size: 3em; line-height: 2em; font-weight: 600; text-transform: uppercase; border-bottom: 1px dotted rgba(255,255,255, .5); }
-  .weathericon { display: inline-block; font-family: weatherSansSerif; font-size: 5em; line-height: 1em; display: inline-block;}
-  .currently { display: inline-block; vertical-align: middle; margin: -38px 15px 0 0;}
-  .weather { display: inline-block; font-size: 3em; line-height: 1.4em; display: inline-block; }
+  .title { font-size: 3em; line-height: 1em; font-weight: 600; text-transform: uppercase; border-bottom: 1px dotted rgba(255,255,255, .5); }
+  .weathericon { display: inline-block; font-family: weatherSansSerif; font-size: 5em; line-height: 1em; margin: -17px 10px 0 0; vertical-align: middle;}
+  .currently { display: inline-block; margin: 0px 15px 0 0; vertical-align: middle;}
+  .weather { display: inline-block; font-size: 3em; line-height: 1.4em; display: inline-block; vertical-align: middle; }
   .forecast { display: inline-block; margin: 0 15px 0 0; }
-    .future { border-bottom: 1px dotted rgba(255,255,255, .5); padding-bottom: 15px; margin: 0 0 15px 0; }
+    .future { border-bottom: 1px dotted rgba(255,255,255, .5); margin: 0 0 15px 0; }
     .future .weather { font-size: 2em; line-height: 2em; vertical-align: middle; }
   .highLow { display: block; border-bottom: 1px dotted rgba(255,255,255, .5); padding-bottom: 15px; margin: 0 0 15px 0; }
   .tempHigh,.tempLow { display: inline-block; font-size: 4em; line-height: 1em; margin-right: 20px;}
