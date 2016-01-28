@@ -37,4 +37,8 @@ body,html { font-family: 'Roboto', Helvetica, Arial, sans-serif;  font-weight: 1
   .temp { display: block; font-size: 10em; line-height: 1em; font-weight: 600; }
 
 .bottomRight { text-align: left; position: absolute; bottom: 0; right: 0; padding: 0px; font-size: 3em; line-height: 1.3em;  }
+  .bottomRight h3 { font-size: .4em; line-height: 2em; }
   #map { border-radius: 20px; }
+
+
+
