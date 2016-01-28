@@ -6,10 +6,7 @@ $(document).ready(function() {
   $('body').css('color',config.txtColor);
 
   // Init Background images
-  $.backstretch([
-     "http://i.imgur.com/hvtYISi.jpg"
-     //, "feel free to add more here"
-  ], {duration: 30000, fade: 8000});
+  $.backstretch(config.bgImages, {duration: config.bgImageDuration, fade: config.bgImageFade});
 
   // Init Clock & weather/map refresh
   startTime();
@@ -194,8 +191,8 @@ function getWeather(){
 // Init Traffic Map
 function initializeMap(){
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
-    center: new google.maps.LatLng(41.4577291, -73.334476),
+    zoom: config.mapZoom,
+    center: new google.maps.LatLng(config.mapLat, config.mapLong),
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
 

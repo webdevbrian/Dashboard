@@ -21,11 +21,11 @@ body,html { font-family: 'Roboto', Helvetica, Arial, sans-serif;  font-weight: 1
   .sunriseSunset { font-size: 4em; line-height: 1.4em; margin-top: -10px; }
     .riseIcon, .setIcon{ font-family: weatherSansSerif; font-size: 1em; line-height: 1em; display: inline-block;}
     .sunriseTime, .sunsetTime { font-size: .75em; line-height: 1em; display: inline-block;}
-  .time {  font-size: 10em; line-height: 1.0em; font-weight: 400; }
+  .time { font-size: 10em; line-height: 1.0em; font-weight: 400; }
 
 .bottomLeft { text-align: left; position: absolute; bottom: 0; left: 0; padding: 20px;}
   .title { font-size: 3em; line-height: 2em; font-weight: 600; text-transform: uppercase; border-bottom: 1px dotted rgba(255,255,255, .5); }
-  .weathericon { display: inline-block; font-family: weatherSansSerif; font-size: 8em; line-height: 0.6em; display: inline-block;}
+  .weathericon { display: inline-block; font-family: weatherSansSerif; font-size: 5em; line-height: 1em; display: inline-block;}
   .currently { display: inline-block; vertical-align: middle; margin: -38px 15px 0 0;}
   .weather { display: inline-block; font-size: 3em; line-height: 1.4em; display: inline-block; }
   .forecast { display: inline-block; margin: 0 15px 0 0; }
