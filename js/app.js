@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  console.log('v1.5');
+  console.log('v1.2');
 
   // Text Color
   $('body').css('color',config.txtColor);
@@ -43,7 +43,7 @@ function getWeather(){
   initializeMap();
 
   $.simpleWeather({
-    zipcode: config.zipcode,
+    location: config.myLocation,
     success: function(weather) {
 
       $('#content').show();
