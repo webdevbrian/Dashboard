@@ -46,13 +46,15 @@ function getWeather(){
     location: config.myLocation,
     success: function(weather) {
 
+      console.log(weather);
+
       $('#content').show();
 
       $('.sunriseTime').html(weather.sunrise);
       $('.sunsetTime').html(weather.sunset);
 
       $('.current .weather').html(weather.currently);
-      $('.future .weather').html(weather.forecast);
+      $('.future .weather').html(weather.forecast[0].text);
       $('.tempHigh').html('H: ' + weather.high + '&deg; |');
       $('.tempLow').html('L: ' + weather.low+'&deg;');
       $('.temp').html(weather.temp + '&deg;' + weather.units.temp);

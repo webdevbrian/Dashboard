@@ -5,8 +5,8 @@ var config = {
   // General Settings
   /*********************************/
 
-  // Your Location (town or city, state)
-  myLocation: 'Woodbury, CT',
+  // Your Zipcode
+  myLocation: '06798',
 
   // Color for text (can be hex)
   txtColor: 'white',
