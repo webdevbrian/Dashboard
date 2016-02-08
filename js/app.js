@@ -46,8 +46,6 @@ function getWeather(){
     location: config.myLocation,
     success: function(weather) {
 
-      console.log(weather);
-
       $('#content').show();
 
       $('.sunriseTime').html(weather.sunrise);
