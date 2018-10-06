@@ -1,0 +1,22 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "Made a lot of changes since this use to be called \"Big Ass Clock\" Ha!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevbrian/Dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webdevbrian/Dashboard/issues"
+  },
+  "homepage": "https://github.com/webdevbrian/Dashboard#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
