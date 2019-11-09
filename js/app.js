@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   console.log('v1.2');
 
   // Text Color
@@ -13,7 +12,6 @@ $(document).ready(function() {
   setInterval("startTime()", 1000);
   getWeather();
   setInterval("getWeather()", 900000);
-
 }); // End DocReady
 
 // Clock
@@ -161,10 +159,10 @@ function getWeather(){
       }
 
       $('.weathericon').html(weatherCode);
-
     },
     error: function(error) {
-      $(".date").html('Weather error, check your settings!');
+      $(".date").html('Weather error, check your settings! ' + error);
+      console.log(error);
     }
   });
 }
@@ -179,7 +177,5 @@ function initializeMap(){
 
   var trafficLayer = new google.maps.TrafficLayer();
   trafficLayer.setMap(map);
-
   google.maps.event.trigger(trafficLayer, 'resize');
-
 }
